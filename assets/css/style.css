@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+html,
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong,
+sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+	-webkit-text-size-adjust: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+	display: block;
+}
+
+nav ul {
+	list-style: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, select {
+	vertical-align: middle;
+}
+
+body {
+	color: #333;
+	line-height: 1.8;
+	font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "メイリオ", "Meiryo", sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100svh;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+body .wrapper {
+	margin-bottom: auto;
+}
+
+.wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+@media (hover: hover) {
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+/* --------------------------------------------
+ * 　基本ブロック幅
+ * -------------------------------------------- */
+.blContainer {
+	width: 92%;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* --------------------------------------------
+ * 　サブページヘッダー
+ * -------------------------------------------- */
+.subpageHeader {
+	font-size: 1.75rem;
+	font-weight: bold;
+	background: #f3f3f3;
+	margin-bottom: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* --------------------------------------------
+ * 　見出し
+ * -------------------------------------------- */
+.sectionHeading {
+	font-size: 1.75rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* --------------------------------------------
+ * 　テーブル
+ * -------------------------------------------- */
+.table {
+	width: 100%;
+}
+
+.table-header {
+	width: 100px;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.table-data {
+	width: calc(100% - 100px);
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+/* --------------------------------------------
+ * 　ページネーション
+ * -------------------------------------------- */
+.navigation.pagination {
+	margin-top: 30px;
+}
+
+.navigation.pagination .nav-links .prev {
+	border: none !important;
+}
+
+.navigation.pagination .nav-links .next {
+	border: none !important;
+}
+
+.navigation.pagination .nav-links .current {
+	padding: 6px 11px;
+	background: #333;
+	border: 1px solid #333;
+	border-radius: 3px;
+	color: #ffffff;
+}
+
+.navigation.pagination .nav-links a {
+	padding: 6px 11px;
+	border: 1px solid #333;
+	border-radius: 3px;
+}
+
+.navigation.pagination .nav-links a:hover {
+	background: #333;
+	border: 1px solid #333;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* --------------------------------------------
+ * 　ヘッダー
+ * -------------------------------------------- */
+.header {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.header-logo {
+	margin-top: -10px;
+	margin-right: auto;
+}
+
+.mainMenu {
+	font-size: 0.9375rem;
+}
+
+.mainMenu-list {
+	display: flex;
+	gap: 20px;
+}
+
+.keyVisual {
+	margin-bottom: 10px;
+}
+
+.frontNews {
+	margin-bottom: 50px;
+}
+
+.news-item {
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.news-date {
+	flex: 0 0 115px;
+}
+
+.news-goList {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+/* --------------------------------------------
+ * 　施工事例
+ * -------------------------------------------- */
+.works-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.works-item {
+	flex: 0 0 calc((100% - 80px) / 3);
+	background: #f2f2f2;
+	padding: 20px 20px 17px;
+}
+
+.works-img {
+	margin-bottom: 8px;
+}
+
+.works-date {
+	font-size: 0.8125rem;
+	margin-bottom: 3px;
+}
+
+.works-title {
+	font-size: 0.9375rem;
+	line-height: 1.6;
+}
+
+.works-goList {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.worksPost-title {
+	font-size: 1.75rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.worksPost-information {
+	font-size: 0.875rem;
+	margin-bottom: 20px;
+}
+
+/* --------------------------------------------
+ * 　お知らせ
+ * -------------------------------------------- */
+.article-date {
+	font-size: 0.8125rem;
+}
+
+.article-category {
+	font-size: 0.8125rem;
+	margin-bottom: 20px;
+}
+
+.article-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+/* --------------------------------------------
+ * 　フッター
+ * -------------------------------------------- */
+.footer {
+	margin-top: 100px;
+	padding-top: 60px;
+	background: #eee;
+}
+
+.footer-container {
+	text-align: center;
+}
+
+.footer-logo {
+	margin-bottom: 40px;
+}
+
+.footer-copyRight {
+	font-size: 0.6875rem;
+	text-align: center;
+	margin-top: 70px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: #333;
+	color: #fff;
+}
+
+.footerMenu {
+	font-size: 0.875rem;
+}
+
+.footerMenu-list {
+	display: inline-flex;
+	gap: 20px;
+}
+
+/* --------------------------------------------
+ * 　404
+ * -------------------------------------------- */
+.page404 {
+	text-align: center;
+	padding-top: 12vh;
+	padding-bottom: 15vh;
+}
+
+.page404-heading {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #aaa;
+	margin-bottom: 30px;
+}
+
+.page404-message a {
+	text-decoration: underline;
+}
+
+/* --------------------------------------------
+ * 　フォーム
+ * -------------------------------------------- */
+.screen-reader-response {
+	display: none;
+}
+
+.wpcf7-not-valid-tip {
+	color: #f02525;
+}
+
+.wpcf7-response-output {
+	margin-top: 5px;
+	text-align: center;
+	color: #f02525;
+}
+
+.form {
+	width: 100%;
+	max-width: 860px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.form-privacy {
+	text-align: center;
+}
+
+.form-submit {
+	width: 200px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.form-submit input {
+	width: 100%;
+	padding: 1em;
+	background: #333;
+	color: #fff;
+	border: none;
+}
+
+.form-submit input:hover {
+	cursor: pointer;
+}
+
+.formTable {
+	width: 100%;
+}
+
+.formTable-header {
+	width: 220px;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: middle;
+}
+
+.formTable-header span {
+	color: #fff;
+	margin-left: 10px;
+	font-size: 0.6875rem;
+	font-weight: normal;
+	padding: 0.3em;
+	background: #f02525;
+}
+
+.formTable-data {
+	width: calc(100% - 220px);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.formTable input {
+	width: 100%;
+	height: 50px;
+	padding: 0.5em;
+}
+
+.formTable textarea {
+	width: 100%;
+	height: 200px;
+	padding: 0.5em;
+}
+
+/* --------------------------------------------
+ * 　ブロックエディタ
+ * -------------------------------------------- */
+.wp-block-gallery {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
