@@ -2,23 +2,22 @@
 <section class="frontNews blContainer">
    <h2 class="frontNews-heading sectionHeading">お知らせ</h2>
    <div class="frontNews-list news">
-         <?php if (have_posts()): ?>
-            <ul class="news-list">
-               <?php while (have_posts()): ?>
-                  <?php the_post(); ?>
-                  <li class="news-item">
-                     <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
-                     <a class="news-link" href="<?php the_permalink(); ?>">
-                        <div class="news-title"><?php the_title(); ?></div>
-                     </a>
-                  </li>
-               <?php endwhile; ?>
-            </ul>
-         <?php else: ?>
-            <p>お知らせがありません</p>
-         <?php endif; ?>
-         
-      <a class="news-goList" href="/news/">一覧をみる</a>
+      <?php if (have_posts()): ?>
+         <ul class="news-list">
+            <?php while (have_posts()): ?>
+               <?php the_post(); ?>
+               <li class="news-item">
+                  <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
+                  <a class="news-link" href="<?php the_permalink(); ?>">
+                     <div class="news-title"><?php the_title(); ?></div>
+                  </a>
+               </li>
+            <?php endwhile; ?>
+         </ul>
+      <?php else: ?>
+         <p>お知らせがありません</p>
+      <?php endif; ?>
+      <a class="news-goList" href="<?php echo home_url('/news/'); ?>">一覧をみる</a>
    </div>
    </section>
 
