@@ -37,9 +37,19 @@
 			</ul>
 		</nav>
 	</header>
-   <div class="keyVisual">
+
+	<?php if (is_front_page()): ?>
+		<div class="keyVisual">
 			<div class="keyVisual-inner blContainer">
-         <img src="<?php echo get_theme_file_uri('/assets/img/header.jpg'); ?>" alt="">
-      </div>
-   </div>
+				<img src="<?php echo get_theme_file_uri('/assets/img/header.jpg'); ?>" alt="">
+			</div>
+		</div>
+	<?php else: ?>
+		<div class="subpageHeader">
+			<div class="subpageHeader-inner blContainer">
+				<?php echo get_the_title(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
    <div class="wrapper">
