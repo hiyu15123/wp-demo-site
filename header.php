@@ -37,7 +37,6 @@
 			</ul>
 		</nav>
 	</header>
-
 	<?php if (is_front_page()): ?>
 		<div class="keyVisual">
 			<div class="keyVisual-inner blContainer">
@@ -47,9 +46,12 @@
 	<?php else: ?>
 		<div class="subpageHeader">
 			<div class="subpageHeader-inner blContainer">
-				<?php echo get_the_title(); ?>
+				<?php if(is_home() || is_single() || is_category()): ?>
+					お知らせ
+				<?php else: ?>
+					<?php echo get_the_title(); ?>
+				<?php endif ?>
 			</div>
 		</div>
 	<?php endif; ?>
-
    <div class="wrapper">

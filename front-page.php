@@ -2,10 +2,17 @@
 <section class="frontNews blContainer">
    <h2 class="frontNews-heading sectionHeading">お知らせ</h2>
    <div class="frontNews-list news">
-      <?php if (have_posts()): ?>
+      <?php 
+      $args = [
+         'post_type' => 'post',
+         'posts_per_page' => 5,
+      ];
+      $the_query = new WP_Query($args);
+      ?>
+      <?php if ($the_query -> have_posts()): ?>
          <ul class="news-list">
-            <?php while (have_posts()): ?>
-               <?php the_post(); ?>
+            <?php while ($the_query->have_posts()): ?>
+               <?php $the_query->the_post(); ?>
                <li class="news-item">
                   <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
                   <a class="news-link" href="<?php the_permalink(); ?>">
@@ -14,6 +21,7 @@
                </li>
             <?php endwhile; ?>
          </ul>
+         <?php wp_reset_postdata() ?>
       <?php else: ?>
          <p>お知らせがありません</p>
       <?php endif; ?>
