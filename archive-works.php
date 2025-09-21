@@ -14,7 +14,7 @@
 									<img src="<?php echo get_theme_file_uri('/assets/img/nophoto.jpg'); ?>">
 								<?php endif; ?>
 							</div>
-							<p>完成日：<?php echo esc_html( get_post_meta( get_the_ID(), 'completion_date', true ) ); ?></p>
+                     <div class="works-date">完成日 : <?php echo get_field('works-complete'); ?></div>
 							<div class="works-title"><?php the_title(); ?></div>
 						</a>
 					</li>

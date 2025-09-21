@@ -6,9 +6,9 @@
          <div class="worksPost">
 				<h1 class="worksPost-title"><?php the_title(); ?></h1>
 				<div class="worksPost-information">
-					<div class="worksPost-location">場所：</div>
-					<div class="worksPost-plan">間取り：</div>
-					<div class="worksPost-date">完成：</div>
+					<div class="worksPost-location">場所：<?php echo get_field('works-location') ?></div>
+					<div class="worksPost-plan">間取り：<?php echo get_field('works-plan') ?></div>
+					<div class="worksPost-date">完成：<?php echo get_field('works-complete') ?></div>
 				</div>
 				<div class="worksPost-content">
 					<?php the_content(); ?>
