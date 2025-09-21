@@ -46,8 +46,10 @@
 	<?php else: ?>
 		<div class="subpageHeader">
 			<div class="subpageHeader-inner blContainer">
-				<?php if(is_home() || is_single() || is_category()): ?>
+				<?php if (is_home() || is_singular('post') || is_category()): ?>
 					お知らせ
+				<?php elseif (is_post_type_archive('works') || is_singular('works')): ?>
+					施工事例
 				<?php else: ?>
 					<?php echo get_the_title(); ?>
 				<?php endif ?>

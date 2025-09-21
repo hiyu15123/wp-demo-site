@@ -32,36 +32,37 @@
    <section class="frontWorks blContainer">
    <h2 class="frontWorks-heading sectionHeading">施工事例</h2>
    <div class="works">
-      <ul class="works-list">
-         <li class="works-item">
-         <a class="works-link" href="/works/works-01.html">
-            <div class="works-img">
-               <img src="/assets/img/works01.jpg" alt="施工事例01">
-            </div>
-            <div class="works-date">完成日：2024.11.29</div>
-            <div class="works-title">〇〇邸リフォーム</div>
-         </a>
-         </li>
-         <li class="works-item">
-         <a class="works-link" href="/works/works-02.html">
-            <div class="works-img">
-               <img src="/assets/img/works02.jpg" alt="施工事例02">
-            </div>
-            <div class="works-date">完成日：2024.10.10</div>
-            <div class="works-title">△△マンション改修</div>
-         </a>
-         </li>
-         <li class="works-item">
-         <a class="works-link" href="/works/works-03.html">
-            <div class="works-img">
-               <img src="/assets/img/works03.jpg" alt="施工事例03">
-            </div>
-            <div class="works-date">完成日：2024.09.15</div>
-            <div class="works-title">□□店舗リニューアル</div>
-         </a>
-         </li>
-      </ul>
-      <a class="works-goList" href="/works/">一覧をみる</a>
+      <?php 
+      $args = [
+         'post_type' => 'works',
+         'posts_per_page' => 3,
+      ];
+      $the_query = new WP_Query($args); 
+      ?>
+      <?php if($the_query -> have_posts()): ?>
+         <ul class="works-list">
+            <?php while($the_query -> have_posts()): ?>
+               <?php $the_query -> the_post(); ?>
+               <li class="works-item">
+                  <a class="works-link" href="<?php the_permalink(); ?>">
+                     <div class="works-img">
+                        <?php if (has_post_thumbnail()): ?>
+                           <?php the_post_thumbnail(); ?>
+                        <?php else: ?>
+                           <img src="/assets/img/works03.jpg" alt="施工事例03">
+                        <?php endif; ?>
+                     </div>
+                     <div class="works-date">完成日：<?php get_the_date('Y.m.d') ?></div>
+                     <div class="works-title"><?php the_title(); ?></div>
+                  </a>
+               </li>
+            <?php endwhile; ?>
+         </ul>
+         <?php wp_reset_postdata(); ?>
+      <?php else: ?>
+         <p class="works-noPost">実績がまだ掲載されていません</p>
+      <?php endif; ?>
+      <a class="works-goList" href="<?php echo home_url('/works/') ?>">一覧をみる</a>
    </div>
 </section>
 <?php get_footer(); ?>
