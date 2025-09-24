@@ -1,0 +1,1 @@
+console.log('script.jsを読み込みました');
