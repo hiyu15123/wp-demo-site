@@ -39,7 +39,7 @@
 	<?php if (is_front_page()): ?>
 		<div class="keyVisual">
 			<div class="keyVisual-inner blContainer">
-				<img src="<?php echo get_theme_file_uri('/assets/img/header.jpg'); ?>" alt="">
+				<img src="<?php echo get_theme_file_uri('/assets/img/img_visual.jpg'); ?>" alt="メインビジュアル">
 			</div>
 		</div>
 	<?php else: ?>

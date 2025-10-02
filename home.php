@@ -6,8 +6,19 @@
             <?php while (have_posts()): ?>
                <?php the_post(); ?>
                <li class="news-item">
-                  <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
-                  <a class="news-link" href="<?php the_permalink(); ?>">
+                  <a href="<?php the_permalink(); ?>" class="news-link">
+                     <div class="news-detail">
+                        <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
+                        <div class="news-category">
+                           <?php
+                           $categories = get_the_category();
+                           if ($categories) {
+                              foreach ($categories as $category) {
+                                 echo '<span class="news-category-name">' . esc_html($category->name) . '</span>';
+                              }
+                           } ?>
+                        </div>
+                     </div>
                      <div class="news-title"><?php the_title(); ?></div>
                   </a>
                </li>

@@ -14,8 +14,19 @@
             <?php while ($the_query->have_posts()): ?>
                <?php $the_query->the_post(); ?>
                <li class="news-item">
-                  <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
-                  <a class="news-link" href="<?php the_permalink(); ?>">
+                  <a href="<?php the_permalink(); ?>" class="news-link">
+                     <div class="news-detail">
+                        <div class="news-date"><?php echo get_the_date('Y.m.d'); ?></div>
+                        <div class="news-category">
+                           <?php
+                           $categories = get_the_category();
+                           if ($categories) {
+                              foreach ($categories as $category) {
+                                 echo '<span class="news-category-name">' . esc_html($category->name) . '</span>';
+                              }
+                           } ?>
+                        </div>
+                     </div>
                      <div class="news-title"><?php the_title(); ?></div>
                   </a>
                </li>
@@ -52,7 +63,7 @@
                            <img src="/assets/img/works03.jpg" alt="施工事例03">
                         <?php endif; ?>
                      </div>
-                     <div class="works-date">完成日：<?php get_the_date('Y.m.d') ?></div>
+                     <div class="works-date">完成日：<?php echo get_field('works-complete') ?></div>
                      <div class="works-title"><?php the_title(); ?></div>
                   </a>
                </li>

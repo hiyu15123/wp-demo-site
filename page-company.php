@@ -3,7 +3,7 @@
    <table class="table">
 		<tr class="table-row">
 			<th class="table-header">会社名</th>
-			<td class="table-data">アルカディアストラクチャー株式会社</td>
+			<td class="table-data">ワードプレスデモサイト株式会社</td>
 		</tr>
 		<tr class="table-row">
 			<th class="table-header">所在地</th>
@@ -11,15 +11,15 @@
 		</tr>
 		<tr class="table-row">
 			<th class="table-header">電話番号</th>
-			<td class="table-data">03-1234-5678</td>
+			<td class="table-data"><a href="tel+81234567899"></a>12-3456-7899</td>
 		</tr>
 		<tr class="table-row">
 			<th class="table-header">役員</th>
-			<td class="table-data">代表取締役　頷 太郎</td>
+			<td class="table-data">代表取締役　山田 太郎</td>
 		</tr>
 		<tr class="table-row">
 			<th class="table-header">設立</th>
-			<td class="table-data">2016年 8月22日</td>
+			<td class="table-data">2025年 10月01日</td>
 		</tr>
 		<tr class="table-row">
 			<th class="table-header">取引銀行</th>
