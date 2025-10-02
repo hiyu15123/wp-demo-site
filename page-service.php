@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 <div class="service blContainer">
-   サービスページの内容が入ります。
+   <?php the_content(); ?>
 </div>
 <?php get_footer(); ?>

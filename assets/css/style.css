@@ -547,6 +547,37 @@ a {
 	gap: 1.5rem;
 }
 
+h2 {
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.form input {
+	width: 100%;
+}
+
+
+.form-btn p {
+	display: grid;
+	place-items: center;
+}
+
+.form-btn input[type="submit"] {
+	width: 250px;
+	border-radius: 2rem;
+	font-size: 1rem;
+	padding: 0.75rem 1.5rem;
+}
+
+.form-btn input[type="submit"]:hover {
+	cursor: pointer;
+}
+
 @media (max-width: 768px) {
 	.header {
 		flex-direction: column;
@@ -571,6 +602,13 @@ a {
 	.footerMenu-list {
 		flex-wrap: wrap;
 		gap: 10px;
+	}
+	.formTable-tow {
+		display: flex;
+		flex-direction: column;
+	}
+	.formTable-data {
+		width: 100%;
 	}
 }
 
